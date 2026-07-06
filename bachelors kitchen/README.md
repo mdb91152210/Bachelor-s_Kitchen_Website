@@ -1,4 +1,4 @@
-# Bachelor's Kitchen — Authentic South Indian Recipes
+# Bachelor's Kitchen — Authentic South Indian Recipes #
 
 A modern, interactive web application for discovering and mastering authentic South Indian cuisine. This project features a beautiful dark editorial design with real cooking timers, detailed step-by-step recipes, and a seamless user experience.
 
