@@ -1,0 +1,51 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ recipe.name }} — Bachelor's Kitchen</title>
+  <link rel="stylesheet" href="{% static 'homeapp/style.css' %}">
+  <script src="{% static 'homeapp/script.js' %}"></script>
+</head>
+<body>
+  <main style="padding:120px 40px;max-width:1000px;margin:0 auto;color:var(--cream)">
+    <a href="{% url 'homeapp:recipe_list' %}" class="back-link">← Back to recipes</a>
+    <h1 class="heading-xl">{{ recipe.name }}</h1>
+    <div style="display:flex;gap:24px;margin-top:12px">
+      <img src="{{ recipe.image_url }}" alt="{{ recipe.name }}" style="width:360px;height:240px;object-fit:cover;border-radius:12px">
+      <div>
+        <p style="color:var(--cream-2)">{{ recipe.description }}</p>
+        <p style="margin-top:12px">Region: <strong>{{ recipe.region }}</strong></p>
+        <p>Time: <strong>{{ recipe.time }}</strong> · Serves: <strong>{{ recipe.servings }}</strong></p>
+        <div style="margin-top:8px">
+          <a href="{% url 'homeapp:recipe_update' recipe.slug %}" class="btn btn-outline-gold">Edit</a>
+          <a href="{% url 'homeapp:recipe_delete' recipe.slug %}" class="btn btn-danger">Delete</a>
+        </div>
+      </div>
+    </div>
+
+    <section style="margin-top:28px">
+      <h3>Ingredients</h3>
+      <ul>
+        {% for ing in recipe.ingredients %}
+          <li>{{ ing }}</li>
+        {% empty %}
+          <li>No ingredients listed.</li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section style="margin-top:18px">
+      <h3>Method</h3>
+      <ol>
+        {% for step in recipe.steps %}
+          <li>{{ step.text }}</li>
+        {% empty %}
+          <li>No steps listed.</li>
+        {% endfor %}
+      </ol>
+    </section>
+  </main>
+</body>
+</html>

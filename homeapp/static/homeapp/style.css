@@ -1,0 +1,59 @@
+/* style.css copied from cooking_website/style.css (full content) */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ── TOKENS ──────────────────────────────────────────────── */
+:root {
+	--ink:       #0d0b08;
+	--ink-2:     #191610;
+	--ink-3:     #231f18;
+	--surface:   #1e1a13;
+	--surface-2: #282319;
+	--surface-3: #322c20;
+	--line:      rgba(255,210,100,.1);
+	--line-2:    rgba(255,210,100,.06);
+
+	--gold:      #e8a020;
+	--gold-2:    #f5c842;
+	--gold-dim:  rgba(232,160,32,.12);
+	--gold-glow: rgba(232,160,32,.28);
+
+	--ember:     #d94f2a;
+	--ember-dim: rgba(217,79,42,.12);
+
+	--leaf:      #4caf7d;
+	--leaf-dim:  rgba(76,175,125,.12);
+
+	--cream:     #f4edd8;
+	--cream-2:   #c9bfa6;
+	--cream-3:   #7d7262;
+
+	--r:  20px;
+	--r2: 28px;
+	--r3: 40px;
+
+	--nav: 76px;
+	--max: 1400px;
+
+	--ease: cubic-bezier(.22,1,.36,1);
+	--ease-back: cubic-bezier(.34,1.56,.64,1);
+}
+
+/* ── RESET ───────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+	font-family: 'Outfit', sans-serif;
+	background: var(--ink);
+	color: var(--cream);
+	min-height: 100vh;
+	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; }
+button { font-family: 'Outfit', sans-serif; cursor: pointer; }
+a { text-decoration: none; color: inherit; }
+input, textarea, select { font-family: 'Outfit', sans-serif; }
+
+/* Full stylesheet continues (copied from cooking_website/style.css) */
+

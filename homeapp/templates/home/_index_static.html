@@ -1,0 +1,147 @@
+<!-- Inlined body from cooking_website/index.html — assets referenced via Django static in the parent template -->
+
+<nav class="navbar" id="navbar">
+  <div class="nav-brand" onclick="goTo('home')">
+    <div class="nav-logo-mark">🍛</div>
+    <div class="nav-wordmark">
+      <strong>Bachelor's Kitchen</strong>
+      <span>South Indian Cuisine</span>
+    </div>
+  </div>
+
+  <ul class="nav-links" id="main-nav">
+    <li><a data-p="home"    onclick="goTo('home')"    class="active">Home</a></li>
+    <li><a data-p="recipes" onclick="goTo('recipes')">Recipes</a></li>
+    <li><a data-p="about"   onclick="goTo('about')">About</a></li>
+    <li><a data-p="reviews" onclick="goTo('reviews')">Reviews</a></li>
+  </ul>
+
+  <div class="nav-right" id="nav-user-area">
+    <button class="btn btn-ghost btn-sm" onclick="goTo('login')">Sign in</button>
+    <button class="btn btn-primary btn-sm" onclick="goTo('login')">Get started</button>
+  </div>
+
+  <button class="nav-ham" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+
+<div class="page active" id="pg-home">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-eyebrow">
+        <span class="hero-eyebrow-dot"></span>
+        <span>Authentic South Indian Recipes</span>
+      </div>
+
+      <h1 class="hero-title">
+        Cook like you<br>
+        grew up in<br>
+        <em>South India.</em>
+      </h1>
+
+      <p class="hero-desc">
+        From cloud-soft idlis to fiery Chettinad curries — step-by-step recipes with real cooking timers so nothing burns, nothing fails.
+      </p>
+
+      <div class="hero-actions">
+        <button class="btn btn-primary btn-lg" onclick="goTo('recipes')">Browse Recipes</button>
+        <button class="btn btn-ghost btn-lg" onclick="goTo('about')">Our story →</button>
+      </div>
+
+      <div class="hero-numbers">
+        <div class="hero-num"><strong>9+</strong><span>Recipes</span></div>
+        <div class="hero-num"><strong>4</strong><span>Regions</span></div>
+        <div class="hero-num"><strong>⏱</strong><span>Smart Timers</span></div>
+        <div class="hero-num"><strong>∞</strong><span>Flavour</span></div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-card main" onclick="goTo('detail',1)">
+        <img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=800&q=85" alt="Masala Dosa">
+        <div class="hero-card-overlay"></div>
+        <span class="hero-badge">Fan Favourite</span>
+        <div class="hero-card-body">
+          <div class="hero-card-label">Tamil Nadu · Breakfast</div>
+          <div class="hero-card-name">Masala Dosa</div>
+          <div class="hero-card-meta">⏱ 45 min &nbsp;·&nbsp; Easy</div>
+        </div>
+      </div>
+
+      <div class="hero-card" onclick="goTo('detail',2)">
+        <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=600&q=85" alt="Chettinad Curry">
+        <div class="hero-card-overlay"></div>
+        <div class="hero-card-body">
+          <div class="hero-card-label">Chettinad · Lunch</div>
+          <div class="hero-card-name">Chettinad Curry</div>
+          <div class="hero-card-meta">⏱ 65 min &nbsp;·&nbsp; Medium</div>
+        </div>
+      </div>
+
+      <div class="hero-card" onclick="goTo('detail',6)">
+        <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=600&q=85" alt="Payasam">
+        <div class="hero-card-overlay"></div>
+        <div class="hero-card-body">
+          <div class="hero-card-label">Kerala · Dessert</div>
+          <div class="hero-card-name">Payasam</div>
+          <div class="hero-card-meta">⏱ 45 min &nbsp;·&nbsp; Medium</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ... rest of the original body ... -->
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="nav-brand" style="cursor:default">
+          <div class="nav-logo-mark">🍛</div>
+          <div class="nav-wordmark">
+            <strong>Bachelor's Kitchen</strong>
+            <span>South Indian Cuisine</span>
+          </div>
+        </div>
+        <p class="footer-brand-desc">Your home for authentic South Indian recipes — from first-time cooks to seasoned home chefs. No shortcuts, no fusion, just real food.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a onclick="goTo('home')">Home</a></li>
+          <li><a onclick="goTo('recipes')">All Recipes</a></li>
+          <li><a onclick="goTo('about')">About</a></li>
+          <li><a onclick="goTo('reviews')">Reviews</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Cuisines</h5>
+        <ul>
+          <li><a onclick="goTo('recipes')">Tamil Nadu</a></li>
+          <li><a onclick="goTo('recipes')">Kerala</a></li>
+          <li><a onclick="goTo('recipes')">Karnataka</a></li>
+          <li><a onclick="goTo('recipes')">Andhra</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Account</h5>
+        <ul>
+          <li><a onclick="goTo('login')">Sign in</a></li>
+          <li><a onclick="goTo('login')">Register</a></li>
+        </ul>
+        <div style="margin-top:20px;font-size:.78rem;color:var(--cream-3);line-height:2">
+          Admin demo:<br>
+          <span style="color:var(--gold);font-family:'JetBrains Mono',monospace">admin@kitchen.com<br>admin123</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 Bachelor's Kitchen. Made with 🌶️ and love.</span>
+      <span>HTML · CSS · JavaScript</span>
+    </div>
+  </footer>
+</div>
+

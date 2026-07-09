@@ -1,0 +1,23 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{% if create %}Add{% else %}Edit{% endif %} Recipe</title>
+  <link rel="stylesheet" href="{% static 'homeapp/style.css' %}">
+</head>
+<body>
+  <main style="padding:120px 40px;max-width:800px;margin:0 auto;color:var(--cream)">
+    <h1 class="heading-xl">{% if create %}Add{% else %}Edit{% endif %} Recipe</h1>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <div style="margin-top:12px">
+        <button class="btn btn-primary" type="submit">Save</button>
+        <a href="{% url 'homeapp:recipe_list' %}" class="btn btn-ghost">Cancel</a>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
